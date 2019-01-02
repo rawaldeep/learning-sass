@@ -1,0 +1,384 @@
+$width: 100%;
+$height: 100vh;
+$width2: 1100px;
+$color1: #3782a3;
+$color2: #F1F5F6;
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $color2;
+    .hide{
+        display: none !important;
+    }
+    .out{
+        margin-left: 0 !important;
+    }
+    
+.menu{
+    width: $width;
+    height: -webkit-fill-available;
+    position: fixed;
+    margin-left: -$width;
+    z-index: 999;
+    background-color: rgba(0,0,0, 0.5);
+    overflow-y: scroll;
+    nav{
+        width: 25vw;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        box-sizing: content-box;
+        background-color: #0a5b7f;
+        
+         ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            
+            li:first-child{
+                background-color: $color1;
+                font-size: 2.5em;
+                margin-bottom: 1em;
+                span{
+                    display: block;
+                    width: 25%;
+                    float: right;
+                }
+            }
+            li{
+                color: #fff;
+                font-size: 1.3em;
+                padding: 0.5em;
+                width: $width;
+                border-top: 1px solid $color1;
+            }
+        }
+
+    }
+
+    
+}
+.main{
+    display: grid;
+    .button{
+        background-color: #FF4F2E;;
+        color: #fff;
+        padding: 0.5em;
+        text-align: center;
+        width: 100px;
+        align-self: center;
+        font-size: 1em;
+    }
+.head{
+    background-color: $color1;
+    display: flex;
+    justify-content: space-around;
+    
+    .innerwrap{
+        width: $width2;
+        display: grid;
+  grid-template-columns: 80px 400px 400px 0px;
+    }
+
+    .iconMenu{
+        background-color: #064460;
+        color: #fff;
+        font-size: 1em;
+        padding: 0.7em;
+        align-self: center;
+    }
+    figure img{
+        height: 2.2em;
+    }
+    .search{
+        align-self: center;
+        input{
+            padding: 1em;
+            width: 25em;
+            align-self: center;
+        }
+        i{
+            position: relative;
+            left: -10%;
+        }   
+    }
+    
+}
+.slides{
+    figure{
+        padding: 0;
+        margin: 0;
+        img{ width: $width;}
+    }
+
+
+} 
+}
+.allFilm{
+    width: $width2;
+    margin: auto;
+    padding: 2em 0;
+    h2{
+        color: #6E7474;
+    }
+    .kies{
+        background-color: #FF4F2E;
+        color: #fff;
+        padding: 0.5em;
+        cursor: pointer;
+        width: 150px;
+    }
+    .container{
+        width: $width2;
+        height: auto;
+        display: grid;
+        transition: all 1s ease-in-out;
+        ul{
+            display: grid;
+            grid-gap: 1vw;
+            align-items: center;
+            grid-template-columns: repeat(3,(100/3)*1% );
+            padding:0;
+            li{
+                text-decoration: none;
+                cursor: pointer;
+    background-color: #CBD3D5;
+    display: block;
+    float: left;
+    color: #24447F;
+    font-size: 1em;
+    padding: 1em 0;
+    text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+            }
+        }
+    }
+    .bar{
+        width: $width2;
+        padding: 2em 0 0;
+        .innerwrap{
+            display: grid;
+            text-transform: uppercase;
+            grid-gap: 1em;
+            grid-template-columns: 130px 130px 130px 130px 330px 170px;
+            align-items: center;
+            select{
+                padding: 0.5em;
+                width: 130px;
+                color: #24447F;
+                border-color: #CBD3D5;
+            }
+            .help{
+                color: #6E7474;
+                font-size: 1.7em;
+            }
+            .button{
+                cursor: pointer;
+                width: auto;
+            }
+            .grey{
+    background-color: #CBD3D5;
+    color: #24447F;
+            }
+        }
+    }
+    .diplayArea{
+        position: relative;
+        height: 85em;
+        overflow: hidden;
+    }
+    .movieBox{
+        padding: 2em 0;
+        color: #6E7474;
+        justify-content: center;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(5,(94/5)*1% );
+        
+       
+        .movie{
+            display: grid;
+            background-color: #fff;
+            min-height: 0;
+            min-width: 0;
+           img{
+               margin: 0.5em auto;
+           }
+            img.poster{
+                width: $width;
+                margin: auto;
+            }
+            .details{
+                display: grid;
+                padding: 0 0.7em;
+            
+            
+            span{
+                color: $color1;
+                font-size: 2em;
+                display: flex;
+                justify-content: flex-end;
+                i{
+                    padding: 0.5em 3px;
+                }
+            }
+            p{
+                text-align: left;
+                font-size: 1.2em;
+                span{
+                    font-size: 0.7em;
+                    display: inline;
+                }
+            }
+        }
+
+        }
+
+    }
+    .movieBox:after {
+        content  : "";
+        position : absolute;
+        z-index  : 1;
+        bottom   : 0;
+        left     : 0;
+        pointer-events   : none;
+        background-image : linear-gradient(to bottom, 
+                          rgba(255,255,255, 0),
+                          rgba(255,255,255, 0.7) $width);
+        width    : $width;
+        height   : 15em;
+      }
+    .center{
+        .button{
+        margin: auto;}
+    }
+}
+.slider{
+    padding: 1em;
+    background-color: #CBD3D5;
+    .sliderBox{
+        width: $width2;
+        margin: auto;
+        
+        ul:before {
+            content: url('../img/chevron-circle-left-solid.svg'); 
+            position: absolute;
+            width: 30px;
+            padding: 4em 1em;
+          }
+          
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: repeat(4, calc(100%/4)); 
+
+            
+
+            li{
+
+                img{
+                    width: $width;
+                }
+            }
+        }
+        ul:after {
+            content: url(../img/chevron-circle-left-solid.svg);
+            position: absolute;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            width: 30px;
+            left: 1200px;
+            padding: 4em 1em;
+          }
+
+    }
+}
+}
+.footer{
+    
+    .footerTop{
+        width: $width;
+    background-color: #064460;
+    color: #fff;
+    padding: 1em 0;
+    .footerbox{
+        width: $width2;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(6, calc(100%/6));
+        ul{
+            list-style: none;
+            li:first-child{
+                font-weight: bold;
+                text-transform: uppercase;
+
+            }
+            li{
+                line-height: 1.5em;
+                font-size: 1em;
+                align-items: center;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+            }
+
+            .social{
+                    padding: 2em 0;
+                    li{
+                        ul{
+                            position: relative;
+                            width: 160%;
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-content: center;
+                            padding: 1em 0;
+
+                            li{
+                            text-align: center;
+                                border: 1px solid #fff;
+                                font-size: 1em;
+                                border-radius: 50%;
+                                width: 2.5em;
+                                height: 2.5em;}
+                            i{
+                                transform: translate(0, 8px);
+                                
+                            }
+                    }
+                }
+                }
+            
+        }
+    }
+
+    }
+    .footerBottom{
+       background-color: $color2;
+       padding: 1em 0;
+       .innerwrapper{
+           width: $width2;
+           margin: auto;
+           ul{
+               list-style-type: none;
+               display: flex;
+               justify-content: space-evenly;
+               li{
+                   color: $color1;
+                   text-decoration: underline;
+               }
+           }
+       }
+    }
+
+}
+.lock-scroll {
+    overflow: hidden;
+}
